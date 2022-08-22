@@ -1,3 +1,3 @@
-(() => {
-  console.log('test world');
-});
+(function () {
+    console.log("test world");
+})();
