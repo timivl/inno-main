@@ -6,6 +6,7 @@ gtag('config', 'G-D2HL2ZMZNG');
 
 // Custom GA Events
 (function getEmail() {
+
   try {
 
     let mailObject = $('.f-user-menu-name-container > span')[1]
@@ -19,14 +20,15 @@ gtag('config', 'G-D2HL2ZMZNG');
     setTimeout(getEmail, 1000);
     console.log('custom-ga-event', e);
   }
+
 })();
 
 
-// Remove Custom Footer
-(() => {
-  try {
-    $('#customFooterContainer').remove(); 
-  } catch (e) {
-    console.log('custom-footer-removal', e);
-  }
+(function tick() {
+
+  // remove custom footer.
+  $('#customFooterContainer').remove();
+
+  setTimeout(tick, 1500);
+
 })();
